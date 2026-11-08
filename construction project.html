@@ -1,0 +1,465 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Construction Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="login-box">
+        <h2>Construction Management</h2>
+        <p>Login to your account</p>
+
+        <form id="loginForm">
+            <label>Email Address</label>
+            <input type="email" id="loginEmail"
+                   placeholder="Enter your email" required>
+
+            <label>Password</label>
+            <input type="password" id="loginPassword"
+                   placeholder="Enter your password" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p>Don't have an account?
+            <a href="register.html">Register</a>
+        </p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Construction Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="login-box">
+        <h2>Create Account</h2>
+        <p>Register a new account</p>
+
+        <form id="registerForm">
+            <label>Full Name</label>
+            <input type="text" id="fullname"
+                   placeholder="Enter full name" required>
+
+            <label>Email Address</label>
+            <input type="email" id="registerEmail"
+                   placeholder="Enter email" required>
+
+            <label>Password</label>
+            <input type="password" id="registerPassword"
+                   placeholder="Create password" required>
+
+            <label>Confirm Password</label>
+            <input type="password" id="confirmPassword"
+                   placeholder="Confirm password" required>
+
+            <button type="submit">Register</button>
+        </form>
+
+        <p>Already have an account?
+            <a href="login.html">Login</a>
+        </p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Logs - Construction Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2>Construction System</h2>
+
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="auditLogs.html">Audit Logs</a>
+    </aside>
+
+    <main class="main-content">
+        <h1>Audit Logs</h1>
+        <p>Monitor all user activities in the system.</p>
+
+        <div class="table-container">
+            <input type="search" id="searchLog"
+                   placeholder="Search activity...">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Log ID</th>
+                        <th>User</th>
+                        <th>Activity</th>
+                        <th>Module</th>
+                        <th>Date and Time</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="logTable">
+                    <tr>
+                        <td>001</td>
+                        <td>Admin</td>
+                        <td>Logged in</td>
+                        <td>Login</td>
+                        <td>2026-11-08</td>
+                        <td>Successful</td>
+                    </tr>
+
+                    <tr>
+                        <td>002</td>
+                        <td>John Smith</td>
+                        <td>Registered Account</td>
+                        <td>Register</td>
+                        <td>2026-11-08</td>
+                        <td>Successful</td>
+                    </tr>
+
+                    <tr>
+                        <td>003</td>
+                        <td>Admin</td>
+                        <td>Viewed Project Records</td>
+                        <td>Projects</td>
+                        <td>2026-11-08</td>
+                        <td>Successful</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f1f4f9;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.login-box {
+    background: white;
+    width: 380px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.login-box h2 {
+    text-align: center;
+    color: #17243a;
+    margin-bottom: 10px;
+}
+
+.login-box p {
+    text-align: center;
+    margin: 15px 0;
+    color: #666;
+}
+
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+/* Audit Logs Dashboard */
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 230px;
+    background: #17243a;
+    color: white;
+    padding: 25px 15px;
+}
+
+.sidebar h2 {
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 13px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background: #334766;
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+    min-width: 0;
+}
+
+.main-content h1 {
+    margin-bottom: 10px;
+}
+
+.main-content p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.table-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+.table-container input {
+    margin-bottom: 20px;
+    max-width: 300px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #17243a;
+    color: white;
+}
+
+@media (max-width: 650px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+}
+
+// Get saved users and logs
+function getUsers() {
+    return JSON.parse(localStorage.getItem("users") || "[]");
+}
+
+function getLogs() {
+    return JSON.parse(localStorage.getItem("auditLogs") || "[]");
+}
+
+// Save audit activity
+function addLog(user, activity, module, status) {
+    const logs = getLogs();
+
+    logs.unshift({
+        id: Date.now(),
+        user: user,
+        activity: activity,
+        module: module,
+        date: new Date().toLocaleString(),
+        status: status
+    });
+
+    localStorage.setItem("auditLogs", JSON.stringify(logs));
+}
+
+// Registration
+const registerForm = document.getElementById("registerForm");
+
+if (registerForm) {
+    registerForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById("fullname").value.trim();
+        const email = document.getElementById("registerEmail").value.trim();
+        const password = document.getElementById("registerPassword").value;
+        const confirm = document.getElementById("confirmPassword").value;
+
+        if (password.length < 8) {
+            alert("Password must be at least 8 characters.");
+            return;
+        }
+
+        if (password !== confirm) {
+            alert("Passwords do not match!");
+            return;
+        }
+
+        const users = getUsers();
+
+        if (users.some(user => user.email === email)) {
+            alert("Email is already registered.");
+            return;
+        }
+
+        // Demo only: plaintext storage is NOT safe for real accounts.
+        users.push({
+            name: name,
+            email: email,
+            password: password
+        });
+
+        localStorage.setItem("users", JSON.stringify(users));
+
+        addLog(name, "Registered Account", "Register", "Successful");
+
+        alert("Registration successful!");
+        window.location.href = "login.html";
+    });
+}
+
+// Login
+const loginForm = document.getElementById("loginForm");
+
+if (loginForm) {
+    loginForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const email = document.getElementById("loginEmail").value.trim();
+        const password = document.getElementById("loginPassword").value;
+
+        const users = getUsers();
+
+        const user = users.find(u =>
+            u.email === email && u.password === password
+        );
+
+        if (user) {
+            addLog(user.name, "Logged in", "Login", "Successful");
+
+            alert("Welcome, " + user.name + "!");
+            window.location.href = "auditLogs.html";
+        } else {
+            addLog(email || "Unknown User", "Login Attempt", "Login", "Failed");
+            alert("Invalid email or password.");
+        }
+    });
+}
+
+// Display audit logs
+const logTable = document.getElementById("logTable");
+
+if (logTable) {
+    const logs = getLogs();
+
+    if (logs.length > 0) {
+        logTable.innerHTML = logs.map(log => `
+            <tr>
+                <td>${log.id}</td>
+                <td>${escapeHTML(log.user)}</td>
+                <td>${escapeHTML(log.activity)}</td>
+                <td>${escapeHTML(log.module)}</td>
+                <td>${escapeHTML(log.date)}</td>
+                <td>${escapeHTML(log.status)}</td>
+            </tr>
+        `).join("");
+    }
+}
+
+// Safe text display
+function escapeHTML(value) {
+    return String(value).replace(/[&<>"']/g, char => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;"
+    })[char]);
+}
+
+// Search audit logs
+const searchLog = document.getElementById("searchLog");
+
+if (searchLog) {
+    searchLog.addEventListener("input", function() {
+        const search = this.value.toLowerCase();
+
+        document.querySelectorAll("#logTable tr").forEach(row => {
+            row.style.display = row.innerText.toLowerCase().includes(search)
+                ? ""
+                : "none";
+        });
+    });
+}
